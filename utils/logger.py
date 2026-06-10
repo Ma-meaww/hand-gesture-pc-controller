@@ -2,7 +2,8 @@ import csv
 import os
 from datetime import datetime
 
-LOG_FILE = "event_log.csv"
+LOG_DIR = "logs"
+LOG_FILE = os.path.join(LOG_DIR, "event_log.csv")
 
 HEADERS = [
     "timestamp",
@@ -18,6 +19,8 @@ HEADERS = [
 
 
 def create_log_file_if_needed():
+    os.makedirs(LOG_DIR, exist_ok=True)
+
     if os.path.exists(LOG_FILE):
         return
 
