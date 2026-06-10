@@ -137,12 +137,10 @@ def execute_pc_action(command: str, data: dict) -> dict:
 
     if command == "SCROLL_DOWN":
         pyautogui.scroll(-8)
-        pyautogui.press("pagedown")
         return success("Scrolled down")
 
     if command == "SCROLL_UP":
         pyautogui.scroll(8)
-        pyautogui.press("pageup")
         return success("Scrolled up")
 
     if command == "CLICK":
