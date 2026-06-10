@@ -32,6 +32,9 @@ def create_log_file_if_needed():
 def write_event_log(data: dict, ack: dict):
     create_log_file_if_needed()
 
+    if not isinstance(data, dict):
+        data = {}
+
     row = [
         datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         data.get("command"),

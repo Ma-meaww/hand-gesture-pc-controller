@@ -6,6 +6,7 @@ from automation.browser_automation import (
     open_thaijo,
     input_thaijo_search,
     submit_thaijo_search,
+    close_browser,
 )
 
 pyautogui.FAILSAFE = True
@@ -99,31 +100,42 @@ def move_cursor(x: float, y: float) -> str:
 
     return f"Moved cursor smoothly to ({smooth_x}, {smooth_y})"
 
+def success(message: str) -> dict:
+    return {
+        "status": "success",
+        "message": message,
+    }
 
-def execute_pc_action(command: str, data: dict) -> str:
+def error(message: str) -> dict:
+    return {
+        "status": "error",
+        "message": message,
+    }
+
+def execute_pc_action(command: str, data: dict) -> dict:
     if is_on_cooldown(command):
         return f"Ignored {command}, cooldown active"
     
     if command == "PING":
-        return "pong"
+        return success ("pong")
 
     if command == "SCROLL_DOWN":
-        pyautogui.scroll(-10)
+        pyautogui.scroll(-8)
         pyautogui.press("pagedown")
-        return "Scrolled down"
+        return success("Scrolled down")
 
     if command == "SCROLL_UP":
-        pyautogui.scroll(10)
+        pyautogui.scroll(8)
         pyautogui.press("pageup")
-        return "Scrolled up"
+        return success("Scrolled up")
 
     if command == "CLICK":
         pyautogui.click()
-        return "Clicked"
+        return success("Clicked")
 
     if command == "CONFIRM":
         pyautogui.press("enter")
-        return "Pressed Enter"
+        return success("Pressed Enter")
 
     if command == "INPUT_TEXT":
         return input_text(data.get("text", ""))
@@ -133,17 +145,23 @@ def execute_pc_action(command: str, data: dict) -> str:
         y = data.get("y")
 
         if x is None or y is None:
-            return "Missing x or y"
+            return error("Missing x or y")
 
-        return move_cursor(x, y)
+        try:
+            return success(move_cursor(float(x), float(y)))
+        except (TypeError, ValueError):
+            return error("Invalid x or y")
 
     if command == "OPEN_THAIJO":
-        return open_thaijo()
+        return success(open_thaijo())
 
     if command == "THAIJO_INPUT_SEARCH":
-        return input_thaijo_search(data.get("text", ""))
+        return success(input_thaijo_search(data.get("text", "")))
 
     if command == "THAIJO_SUBMIT_SEARCH":
-        return submit_thaijo_search()
+        return success(submit_thaijo_search())
+    
+    if command == "CLOSE_BROWSER":
+        return success(close_browser())
 
-    return f"Unknown command: {command}"
+    return error(f"Unknown command: {command}")

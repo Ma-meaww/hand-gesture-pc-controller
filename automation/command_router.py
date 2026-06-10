@@ -1,17 +1,6 @@
 from config import ERROR_KEYWORDS
 from automation.actions import execute_pc_action
 
-
-def get_status_from_message(message: str) -> str:
-    message_lower = message.lower()
-
-    for keyword in ERROR_KEYWORDS:
-        if keyword in message_lower:
-            return "error"
-
-    return "success"
-
-
 def print_command_log(data: dict):
     print("\n--- Received Command ---")
     print(f"command: {data.get('command')}")
@@ -32,13 +21,11 @@ async def handle_command(data: dict) -> dict:
 
     print_command_log(data)
 
-    message = execute_pc_action(command, data)
-    status = get_status_from_message(message)
-
-    print(f"action: {message}")
+    result = execute_pc_action(command, data)
+    print(f"action: {result.get('message')}")
 
     return {
-        "status": status,
+        "status": result.get("status", "success"),
         "command": command,
-        "message": message,
+        "message": result.get("message", ""),
     }

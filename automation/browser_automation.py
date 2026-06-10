@@ -1,5 +1,5 @@
 from selenium import webdriver
-from selenium.common.exceptions import WebDriverException
+from selenium.common.exceptions import TimeoutException, WebDriverException
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
@@ -68,65 +68,63 @@ def find_search_box(timeout: int = 10):
 
     wait = WebDriverWait(driver, timeout)
 
-    return wait.until(lambda d: d.execute_script("""
-        const elements = Array.from(document.querySelectorAll('input, textarea'));
+    try:
+        return wait.until(lambda d: d.execute_script("""
+            const elements = Array.from(document.querySelectorAll('input, textarea'));
 
-        function isVisible(el) {
-            const rect = el.getBoundingClientRect();
-            const style = window.getComputedStyle(el);
+            function isVisible(el) {
+                const rect = el.getBoundingClientRect();
+                const style = window.getComputedStyle(el);
 
-            return (
-                rect.width > 80 &&
-                rect.height > 20 &&
-                style.display !== 'none' &&
-                style.visibility !== 'hidden' &&
-                !el.disabled &&
-                el.type !== 'hidden'
-            );
-        }
+                return (
+                    rect.width > 80 &&
+                    rect.height > 20 &&
+                    style.display !== 'none' &&
+                    style.visibility !== 'hidden' &&
+                    !el.disabled &&
+                    el.type !== 'hidden'
+                );
+            }
 
-        const candidates = elements.filter(isVisible);
+            const candidates = elements.filter(isVisible);
 
-        const target = candidates.find(el => {
-            const placeholder = (el.placeholder || '').toLowerCase();
-            const ariaLabel = (el.getAttribute('aria-label') || '').toLowerCase();
-            const title = (el.getAttribute('title') || '').toLowerCase();
-            const name = (el.name || '').toLowerCase();
-            const id = (el.id || '').toLowerCase();
-            const type = (el.type || '').toLowerCase();
+            const target = candidates.find(el => {
+                const placeholder = (el.placeholder || '').toLowerCase();
+                const ariaLabel = (el.getAttribute('aria-label') || '').toLowerCase();
+                const title = (el.getAttribute('title') || '').toLowerCase();
+                const name = (el.name || '').toLowerCase();
+                const id = (el.id || '').toLowerCase();
+                const type = (el.type || '').toLowerCase();
 
-            return (
-                placeholder.includes('ค้น') ||
-                placeholder.includes('ค้นหา') ||
-                placeholder.includes('search') ||
+                return (
+                    placeholder.includes('ค้น') ||
+                    placeholder.includes('ค้นหา') ||
+                    placeholder.includes('search') ||
+                    ariaLabel.includes('ค้น') ||
+                    ariaLabel.includes('ค้นหา') ||
+                    ariaLabel.includes('search') ||
+                    title.includes('ค้น') ||
+                    title.includes('ค้นหา') ||
+                    title.includes('search') ||
+                    name.includes('search') ||
+                    name.includes('keyword') ||
+                    name.includes('query') ||
+                    id.includes('search') ||
+                    id.includes('keyword') ||
+                    id.includes('query') ||
+                    type === 'search'
+                );
+            });
 
-                ariaLabel.includes('ค้น') ||
-                ariaLabel.includes('ค้นหา') ||
-                ariaLabel.includes('search') ||
+            if (target) {
+                target.scrollIntoView({ block: 'center' });
+                return target;
+            }
 
-                title.includes('ค้น') ||
-                title.includes('ค้นหา') ||
-                title.includes('search') ||
-
-                name.includes('search') ||
-                name.includes('keyword') ||
-                name.includes('query') ||
-
-                id.includes('search') ||
-                id.includes('keyword') ||
-                id.includes('query') ||
-
-                type === 'search'
-            );
-        });
-
-        if (target) {
-            target.scrollIntoView({ block: 'center' });
-            return target;
-        }
-
-        return null;
-    """))
+            return null;
+        """))
+    except TimeoutException:
+        return None
 
 
 def input_thaijo_search(keyword: str) -> str:
@@ -167,3 +165,19 @@ def submit_thaijo_search() -> str:
     search_box.send_keys(Keys.ENTER)
 
     return "Submitted ThaiJO search"
+
+def close_browser() -> str:
+    global driver, last_search_box
+
+    if driver is None:
+        return "Browser is not open"
+
+    try:
+        driver.quit()
+    except WebDriverException:
+        pass
+
+    driver = None
+    last_search_box = None
+
+    return "Browser closed"

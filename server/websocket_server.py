@@ -49,8 +49,14 @@ async def websocket_handler(websocket):
 
         try:
             data = json.loads(message)
-            result = await handle_command(data)
-            ack = create_ack(result, start_time)
+            if not isinstance(data, dict):
+                ack = create_error_ack(
+                    message="Invalid message format: JSON must be an object",
+                    start_time=start_time,
+                )
+            else:
+                result = await handle_command(data)
+                ack = create_ack(result, start_time)
 
         except json.JSONDecodeError:
             ack = create_error_ack(
@@ -59,9 +65,10 @@ async def websocket_handler(websocket):
             )
 
         except Exception as error:
+            command = data.get("command") if isinstance(data, dict) else None
             ack = create_error_ack(
                 message=str(error),
-                command=data.get("command"),
+                command=command,
                 start_time=start_time,
             )
 
