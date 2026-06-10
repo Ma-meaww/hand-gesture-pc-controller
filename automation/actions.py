@@ -114,7 +114,7 @@ def error(message: str) -> dict:
 
 def execute_pc_action(command: str, data: dict) -> dict:
     if is_on_cooldown(command):
-        return f"Ignored {command}, cooldown active"
+        return success(f"Ignored {command}, cooldown active")
     
     if command == "PING":
         return success ("pong")
@@ -138,7 +138,12 @@ def execute_pc_action(command: str, data: dict) -> dict:
         return success("Pressed Enter")
 
     if command == "INPUT_TEXT":
-        return input_text(data.get("text", ""))
+        text = data.get("text", "")
+
+        if not text:
+            return error("No text to input")
+
+        return success(input_text(text))
 
     if command == "CURSOR_MOVE":
         x = data.get("x")
