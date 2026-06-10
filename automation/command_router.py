@@ -1,4 +1,3 @@
-from config import ERROR_KEYWORDS
 from automation.actions import execute_pc_action
 
 def print_command_log(data: dict):
