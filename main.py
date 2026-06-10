@@ -5,8 +5,8 @@ import socket
 
 from websockets.asyncio.server import serve
 
-from actions import execute_pc_action
-from logger import write_event_log
+from automation.actions import execute_pc_action
+from utils.logger import write_event_log
 
 HOST = "0.0.0.0"
 PORT = 8765

@@ -2,7 +2,7 @@ import time
 import pyautogui
 import pyperclip
 
-from browser_automation import (
+from automation.browser_automation import (
     open_thaijo,
     input_thaijo_search,
     submit_thaijo_search,
