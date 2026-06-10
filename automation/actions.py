@@ -112,6 +112,22 @@ def error(message: str) -> dict:
         "message": message,
     }
 
+def browser_result(message: str) -> dict:
+    error_keywords = (
+        "not open",
+        "not found",
+        "no keyword",
+        "browser is not open",
+    )
+
+    message_lower = message.lower()
+
+    for keyword in error_keywords:
+        if keyword in message_lower:
+            return error(message)
+
+    return success(message)
+
 def execute_pc_action(command: str, data: dict) -> dict:
     if is_on_cooldown(command):
         return success(f"Ignored {command}, cooldown active")
@@ -158,15 +174,15 @@ def execute_pc_action(command: str, data: dict) -> dict:
             return error("Invalid x or y")
 
     if command == "OPEN_THAIJO":
-        return success(open_thaijo())
+        return browser_result(open_thaijo())
 
     if command == "THAIJO_INPUT_SEARCH":
-        return success(input_thaijo_search(data.get("text", "")))
+        return browser_result(input_thaijo_search(data.get("text", "")))
 
     if command == "THAIJO_SUBMIT_SEARCH":
-        return success(submit_thaijo_search())
-    
+        return browser_result(submit_thaijo_search())
+
     if command == "CLOSE_BROWSER":
-        return success(close_browser())
+        return browser_result(close_browser())
 
     return error(f"Unknown command: {command}")
