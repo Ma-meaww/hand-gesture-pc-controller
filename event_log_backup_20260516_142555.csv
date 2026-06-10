@@ -1,0 +1,236 @@
+﻿timestamp,command,gesture,text,x,y,status,message,latency_ms
+2026-05-16 11:10:10,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,51.34
+2026-05-16 11:10:26,INPUT_TEXT,,Hello,,,success,Input text: Hello,57.25
+2026-05-16 11:10:50,OPEN_THAIJO,,,,,success,Opened ThaiJO website,141.56
+2026-05-16 11:10:58,INPUT_TEXT,,machine learning,,,success,Input text: machine learning,56.34
+2026-05-16 11:11:01,CONFIRM,PINCH_CONFIRM,,,,success,Pressed Enter,50.96
+2026-05-16 11:17:40,OPEN_THAIJO,,,,,success,Opened ThaiJO website,142.43
+2026-05-16 11:17:48,INPUT_TEXT,,machine learning,,,success,Input text: machine learning,57.49
+2026-05-16 11:17:51,CONFIRM,PINCH_CONFIRM,,,,success,Pressed Enter,50.99
+2026-05-16 11:18:10,OPEN_FIRST_RESULT,PINCH_CONFIRM,,,,success,Opened first search result,458.57
+2026-05-16 11:22:42,OPEN_THAIJO,,,,,success,Opened ThaiJO website,140.61
+2026-05-16 11:22:53,FOCUS_THAIJO_SEARCH,,,,,success,"Focused ThaiJO search box at (960, 464)",59.77
+2026-05-16 11:23:15,FOCUS_THAIJO_SEARCH,,,,,success,"Focused ThaiJO search box at (960, 464)",53.06
+2026-05-16 11:28:38,OPEN_THAIJO,,,,,success,Opened ThaiJO website,143.88
+2026-05-16 11:28:49,FOCUS_THAIJO_SEARCH_TAB,,,,,success,Focused ThaiJO search box by pressing Tab 1 time(s),151.54
+2026-05-16 11:38:43,OPEN_THAIJO_AUTO,,,,,success,Opened ThaiJO with Selenium,3259.95
+2026-05-16 11:39:14,THAIJO_INPUT_SEARCH,,machine learning,,,error,"Message: 
+",
+2026-05-16 11:39:45,THAIJO_INPUT_SEARCH,,machine learning,,,error,"Message: 
+",
+2026-05-16 11:39:59,THAIJO_INPUT_SEARCH,,12,,,success,Input ThaiJO keyword: 12,121.42
+2026-05-16 11:51:00,OPEN_THAIJO,,,,,success,Opened ThaiJO,1716.73
+2026-05-16 11:51:00,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,324.96
+2026-05-16 11:51:07,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,44.27
+2026-05-16 12:21:29,OPEN_THAIJO,,,,,success,Opened ThaiJO,1533.18
+2026-05-16 12:21:30,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,348.38
+2026-05-16 12:21:33,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,37.63
+2026-05-16 12:21:49,THAIJO_OPEN_FIRST_RESULT,PINCH_CONFIRM,,,,success,First result not found,10111.8
+2026-05-16 12:24:14,DEBUG_LINKS,,,,,success,Unknown command: DEBUG_LINKS,0.28
+2026-05-16 12:24:59,OPEN_THAIJO,,,,,success,Opened ThaiJO,1683.47
+2026-05-16 12:24:59,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,343.39
+2026-05-16 12:25:03,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,39.25
+2026-05-16 12:25:20,THAIJO_OPEN_FIRST_RESULT,PINCH_CONFIRM,,,,success,First result not found,10129.25
+2026-05-16 12:25:23,DEBUG_LINKS,,,,,success,Printed 20 links,8.59
+2026-05-16 12:27:07,OPEN_THAIJO,,,,,error,"Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=148.0.7778.168); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70db31e35+2e8d45]
+	chromedriver!GetHandleVerifier [0x7ff70d85e6c0+155d0]
+	chromedriver!(No symbol) [0x7ff70d5ad57d]
+	chromedriver!(No symbol) [0x7ff70d598a62]
+	chromedriver!(No symbol) [0x7ff70d5bede1]
+	chromedriver!(No symbol) [0x7ff70d637580]
+	chromedriver!(No symbol) [0x7ff70d654532]
+	chromedriver!(No symbol) [0x7ff70d5f9d58]
+	chromedriver!(No symbol) [0x7ff70d5fac43]
+	chromedriver!GetHandleVerifier [0x7ff70db5dab9+3149c9]
+	chromedriver!GetHandleVerifier [0x7ff70db5802b+30ef3b]
+	chromedriver!GetHandleVerifier [0x7ff70db7c872+333782]
+	chromedriver!GetHandleVerifier [0x7ff70d87b785+32695]
+	chromedriver!GetHandleVerifier [0x7ff70d8842bc+3b1cc]
+	chromedriver!GetHandleVerifier [0x7ff70d867f24+1ee34]
+	chromedriver!GetHandleVerifier [0x7ff70d8680b4+1efc4]
+	chromedriver!GetHandleVerifier [0x7ff70d84bf27+2e37]
+	KERNEL32!BaseThreadInitThunk [0x7ff99cb8e957+17]
+	ntdll!RtlUserThreadStart [0x7ff99ce6427c+2c]
+",
+2026-05-16 12:27:07,THAIJO_INPUT_SEARCH,,machine learning,,,error,"Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70db31e35+2e8d45]
+	chromedriver!GetHandleVerifier [0x7ff70d85e6c0+155d0]
+	chromedriver!(No symbol) [0x7ff70d5ad366]
+	chromedriver!(No symbol) [0x7ff70d5f8dd6]
+	chromedriver!(No symbol) [0x7ff70d62fd72]
+	chromedriver!(No symbol) [0x7ff70d629baf]
+	chromedriver!(No symbol) [0x7ff70d629373]
+	chromedriver!(No symbol) [0x7ff70d576325]
+	chromedriver!GetHandleVerifier [0x7ff70db5dab9+3149c9]
+	chromedriver!GetHandleVerifier [0x7ff70db5802b+30ef3b]
+	chromedriver!GetHandleVerifier [0x7ff70db7c872+333782]
+	chromedriver!GetHandleVerifier [0x7ff70d87b785+32695]
+	chromedriver!GetHandleVerifier [0x7ff70d8842bc+3b1cc]
+	chromedriver!(No symbol) [0x7ff70d5750bc]
+	chromedriver!GetHandleVerifier [0x7ff70dcadc58+464b68]
+	KERNEL32!BaseThreadInitThunk [0x7ff99cb8e957+17]
+	ntdll!RtlUserThreadStart [0x7ff99ce6427c+2c]
+",
+2026-05-16 12:27:44,OPEN_THAIJO,,,,,success,Opened ThaiJO,1523.8
+2026-05-16 12:27:44,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,297.61
+2026-05-16 12:27:47,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,154.21
+2026-05-16 12:28:02,THAIJO_OPEN_FIRST_RESULT,PINCH_CONFIRM,,,,success,First result not found,10113.37
+2026-05-16 12:29:37,OPEN_THAIJO,,,,,success,Opened ThaiJO,1727.81
+2026-05-16 12:29:37,THAIJO_INPUT_SEARCH,,python,,,success,Input ThaiJO keyword: python,162.99
+2026-05-16 12:30:10,THAIJO_INPUT_SEARCH,,Hello,,,success,Input ThaiJO keyword: Hello,115.72
+2026-05-16 12:30:25,OPEN_THAIJO,,,,,success,Opened ThaiJO,501.9
+2026-05-16 12:30:25,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,211.6
+2026-05-16 12:30:29,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,25.59
+2026-05-16 12:30:44,THAIJO_OPEN_FIRST_RESULT,PINCH_CONFIRM,,,,success,First result not found,10110.95
+2026-05-16 12:30:52,DEBUG_ARTICLE_LINKS,,,,,success,Printed 0 article links,5.31
+2026-05-16 12:34:34,OPEN_THAIJO,,,,,success,Opened ThaiJO,1866.91
+2026-05-16 12:34:34,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,369.75
+2026-05-16 12:34:38,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,45.16
+2026-05-16 12:35:02,THAIJO_OPEN_FIRST_RESULT,PINCH_CONFIRM,,,,success,First result not found,10112.31
+2026-05-16 12:35:05,DEBUG_PAGE_STATE,,,,,success,Printed current page state,32.39
+2026-05-16 12:37:57,OPEN_THAIJO,,,,,success,Opened ThaiJO,1522.11
+2026-05-16 12:37:58,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,382.74
+2026-05-16 12:38:02,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO advanced search,53.98
+2026-05-16 12:38:30,THAIJO_OPEN_FIRST_RESULT,PINCH_CONFIRM,,,,success,First result not found,10130.62
+2026-05-16 12:44:46,OPEN_THAIJO,,,,,success,Opened ThaiJO,2445.38
+2026-05-16 12:44:47,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,224.84
+2026-05-16 12:44:52,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,error,"Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=148.0.7778.168); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70db31e35+2e8d45]
+	chromedriver!GetHandleVerifier [0x7ff70d85e6c0+155d0]
+	chromedriver!(No symbol) [0x7ff70d5ad57d]
+	chromedriver!(No symbol) [0x7ff70d5b54f1]
+	chromedriver!(No symbol) [0x7ff70d5b85b5]
+	chromedriver!(No symbol) [0x7ff70d5b867f]
+	chromedriver!(No symbol) [0x7ff70d608630]
+	chromedriver!(No symbol) [0x7ff70d608727]
+	chromedriver!(No symbol) [0x7ff70d5ff56a]
+	chromedriver!(No symbol) [0x7ff70d62fe6a]
+	chromedriver!(No symbol) [0x7ff70d5fb4c6]
+	chromedriver!(No symbol) [0x7ff70d654c63]
+	chromedriver!(No symbol) [0x7ff70d5f9d58]
+	chromedriver!(No symbol) [0x7ff70d5fac43]
+	chromedriver!GetHandleVerifier [0x7ff70db5dab9+3149c9]
+	chromedriver!GetHandleVerifier [0x7ff70db5802b+30ef3b]
+	chromedriver!GetHandleVerifier [0x7ff70db7c872+333782]
+	chromedriver!GetHandleVerifier [0x7ff70d87b785+32695]
+	chromedriver!GetHandleVerifier [0x7ff70d8842bc+3b1cc]
+	chromedriver!GetHandleVerifier [0x7ff70d867f24+1ee34]
+	chromedriver!GetHandleVerifier [0x7ff70d8680b4+1efc4]
+	chromedriver!GetHandleVerifier [0x7ff70d84bf27+2e37]
+	KERNEL32!BaseThreadInitThunk [0x7ff99cb8e957+17]
+	ntdll!RtlUserThreadStart [0x7ff99ce6427c+2c]
+",
+2026-05-16 12:48:49,CURSOR_MOVE,INDEX_FINGER,,0.5,0.5,success,"Moved cursor smoothly to (-412, 698)",51.17
+2026-05-16 12:49:05,CURSOR_MOVE,INDEX_FINGER,,0.52,0.52,success,"Moved cursor smoothly to (81, 650)",50.74
+2026-05-16 12:49:23,CURSOR_MOVE,INDEX_FINGER,,0.9,0.9,success,"Moved cursor smoothly to (657, 762)",51.29
+2026-05-16 12:56:14,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.9
+2026-05-16 12:56:15,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,102.0
+2026-05-16 12:56:16,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.72
+2026-05-16 12:56:16,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,102.95
+2026-05-16 12:56:29,CLICK,PINCH,,,,success,Clicked,52.53
+2026-05-16 12:56:47,CLICK,PINCH,,,,success,Clicked,52.12
+2026-05-16 12:56:50,CLICK,PINCH,,,,success,Clicked,51.97
+2026-05-16 12:56:53,CLICK,PINCH,,,,success,Clicked,52.15
+2026-05-16 12:57:31,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.54
+2026-05-16 12:57:31,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.42
+2026-05-16 12:57:31,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,102.11
+2026-05-16 12:57:31,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,"Ignored SCROLL_DOWN, cooldown active",0.26
+2026-05-16 12:57:32,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,103.74
+2026-05-16 12:57:32,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,"Ignored SCROLL_DOWN, cooldown active",0.26
+2026-05-16 12:57:32,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.66
+2026-05-16 12:57:32,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,"Ignored SCROLL_DOWN, cooldown active",0.3
+2026-05-16 12:57:34,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.69
+2026-05-16 13:07:38,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.7
+2026-05-16 13:07:41,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.71
+2026-05-16 13:07:49,OPEN_THAIJO,,,,,success,Opened ThaiJO,2994.8
+2026-05-16 13:08:02,OPEN_THAIJO,,,,,success,Opened ThaiJO,658.54
+2026-05-16 13:08:03,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,271.84
+2026-05-16 13:08:05,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,29.2
+2026-05-16 13:15:39,OPEN_THAIJO,,,,,success,Opened ThaiJO,1537.56
+2026-05-16 13:16:00,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,122.17
+2026-05-16 13:16:05,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,27.16
+2026-05-16 13:20:19,THAIJO_INPUT_SEARCH,,machine learning,,,error,"Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=148.0.7778.168); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70db31e35+2e8d45]
+	chromedriver!GetHandleVerifier [0x7ff70d85e6c0+155d0]
+	chromedriver!(No symbol) [0x7ff70d5ad57d]
+	chromedriver!(No symbol) [0x7ff70d598a62]
+	chromedriver!(No symbol) [0x7ff70d5bede1]
+	chromedriver!(No symbol) [0x7ff70d637580]
+	chromedriver!(No symbol) [0x7ff70d654532]
+	chromedriver!(No symbol) [0x7ff70d5f9d58]
+	chromedriver!(No symbol) [0x7ff70d5fac43]
+	chromedriver!GetHandleVerifier [0x7ff70db5dab9+3149c9]
+	chromedriver!GetHandleVerifier [0x7ff70db5802b+30ef3b]
+	chromedriver!GetHandleVerifier [0x7ff70db7c872+333782]
+	chromedriver!GetHandleVerifier [0x7ff70d87b785+32695]
+	chromedriver!GetHandleVerifier [0x7ff70d8842bc+3b1cc]
+	chromedriver!GetHandleVerifier [0x7ff70d867f24+1ee34]
+	chromedriver!GetHandleVerifier [0x7ff70d8680b4+1efc4]
+	chromedriver!GetHandleVerifier [0x7ff70d84bf27+2e37]
+	KERNEL32!BaseThreadInitThunk [0x7ff99cb8e957+17]
+	ntdll!RtlUserThreadStart [0x7ff99ce6427c+2c]
+",
+2026-05-16 13:22:57,OPEN_THAIJO,,,,,success,Opened ThaiJO,2602.06
+2026-05-16 13:23:04,THAIJO_INPUT_SEARCH,,y,,,success,Input ThaiJO keyword: y,119.74
+2026-05-16 13:23:20,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,30.33
+2026-05-16 13:23:33,THAIJO_INPUT_SEARCH,,Hello,,,success,ThaiJO is not open. Please use OPEN_THAIJO first.,1.95
+2026-05-16 13:23:34,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,ThaiJO is not open. Please use OPEN_THAIJO first.,1.25
+2026-05-16 13:23:46,OPEN_THAIJO,,,,,error,"Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70db31e35+2e8d45]
+	chromedriver!GetHandleVerifier [0x7ff70d85e6c0+155d0]
+	chromedriver!(No symbol) [0x7ff70d5ad366]
+	chromedriver!(No symbol) [0x7ff70d5f8dd6]
+	chromedriver!(No symbol) [0x7ff70d62fd72]
+	chromedriver!(No symbol) [0x7ff70d629baf]
+	chromedriver!(No symbol) [0x7ff70d629373]
+	chromedriver!(No symbol) [0x7ff70d576325]
+	chromedriver!GetHandleVerifier [0x7ff70db5dab9+3149c9]
+	chromedriver!GetHandleVerifier [0x7ff70db5802b+30ef3b]
+	chromedriver!GetHandleVerifier [0x7ff70db7c872+333782]
+	chromedriver!GetHandleVerifier [0x7ff70d87b785+32695]
+	chromedriver!GetHandleVerifier [0x7ff70d8842bc+3b1cc]
+	chromedriver!(No symbol) [0x7ff70d5750bc]
+	chromedriver!GetHandleVerifier [0x7ff70dcadc58+464b68]
+	KERNEL32!BaseThreadInitThunk [0x7ff99cb8e957+17]
+	ntdll!RtlUserThreadStart [0x7ff99ce6427c+2c]
+",
+2026-05-16 13:23:49,OPEN_THAIJO,,,,,error,"Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70db31e35+2e8d45]
+	chromedriver!GetHandleVerifier [0x7ff70d85e6c0+155d0]
+	chromedriver!(No symbol) [0x7ff70d5ad366]
+	chromedriver!(No symbol) [0x7ff70d5f8dd6]
+	chromedriver!(No symbol) [0x7ff70d62fd72]
+	chromedriver!(No symbol) [0x7ff70d629baf]
+	chromedriver!(No symbol) [0x7ff70d629373]
+	chromedriver!(No symbol) [0x7ff70d576325]
+	chromedriver!GetHandleVerifier [0x7ff70db5dab9+3149c9]
+	chromedriver!GetHandleVerifier [0x7ff70db5802b+30ef3b]
+	chromedriver!GetHandleVerifier [0x7ff70db7c872+333782]
+	chromedriver!GetHandleVerifier [0x7ff70d87b785+32695]
+	chromedriver!GetHandleVerifier [0x7ff70d8842bc+3b1cc]
+	chromedriver!(No symbol) [0x7ff70d5750bc]
+	chromedriver!GetHandleVerifier [0x7ff70dcadc58+464b68]
+	KERNEL32!BaseThreadInitThunk [0x7ff99cb8e957+17]
+	ntdll!RtlUserThreadStart [0x7ff99ce6427c+2c]
+",
+2026-05-16 13:27:04,THAIJO_INPUT_SEARCH,,Hello,,,success,ThaiJO is not open. Please use OPEN_THAIJO first.,0.43
+2026-05-16 13:27:07,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,ThaiJO is not open. Please use OPEN_THAIJO first.,0.25
+2026-05-16 13:27:16,OPEN_THAIJO,,,,,success,Opened ThaiJO,1583.7
+2026-05-16 13:27:33,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,138.22
+2026-05-16 13:27:35,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,30.96
+2026-05-16 13:52:45,THAIJO_INPUT_SEARCH,,y,,,error,ThaiJO is not open. Please use OPEN_THAIJO first.,0.49
+2026-05-16 13:52:59,OPEN_THAIJO,,,,,success,Opened ThaiJO,2279.86
+2026-05-16 13:53:05,THAIJO_INPUT_SEARCH,,Hello,,,success,Input ThaiJO keyword: Hello,177.51
+2026-05-16 14:04:17,PING,,,,,success,pong,1.4

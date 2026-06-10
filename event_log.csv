@@ -1,0 +1,128 @@
+﻿timestamp,command,gesture,text,x,y,status,message,latency_ms
+2026-05-16 11:10:10,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,51.34
+2026-05-16 11:10:26,INPUT_TEXT,,Hello,,,success,Input text: Hello,57.25
+2026-05-16 11:10:50,OPEN_THAIJO,,,,,success,Opened ThaiJO website,141.56
+2026-05-16 11:10:58,INPUT_TEXT,,machine learning,,,success,Input text: machine learning,56.34
+2026-05-16 11:11:01,CONFIRM,PINCH_CONFIRM,,,,success,Pressed Enter,50.96
+2026-05-16 11:17:40,OPEN_THAIJO,,,,,success,Opened ThaiJO website,142.43
+2026-05-16 11:17:48,INPUT_TEXT,,machine learning,,,success,Input text: machine learning,57.49
+2026-05-16 11:17:51,CONFIRM,PINCH_CONFIRM,,,,success,Pressed Enter,50.99
+2026-05-16 11:22:42,OPEN_THAIJO,,,,,success,Opened ThaiJO website,140.61
+2026-05-16 11:28:38,OPEN_THAIJO,,,,,success,Opened ThaiJO website,143.88
+2026-05-16 11:39:14,THAIJO_INPUT_SEARCH,,machine learning,,,error,"Message: 
+",
+2026-05-16 11:39:45,THAIJO_INPUT_SEARCH,,machine learning,,,error,"Message: 
+",
+2026-05-16 11:39:59,THAIJO_INPUT_SEARCH,,12,,,success,Input ThaiJO keyword: 12,121.42
+2026-05-16 11:51:00,OPEN_THAIJO,,,,,success,Opened ThaiJO,1716.73
+2026-05-16 11:51:00,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,324.96
+2026-05-16 11:51:07,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,44.27
+2026-05-16 12:21:29,OPEN_THAIJO,,,,,success,Opened ThaiJO,1533.18
+2026-05-16 12:21:30,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,348.38
+2026-05-16 12:21:33,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,37.63
+2026-05-16 12:24:59,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,343.39
+2026-05-16 12:24:59,OPEN_THAIJO,,,,,success,Opened ThaiJO,1683.47
+2026-05-16 12:25:03,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,39.25
+2026-05-16 12:27:44,OPEN_THAIJO,,,,,success,Opened ThaiJO,1523.8
+2026-05-16 12:27:44,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,297.61
+2026-05-16 12:27:47,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,154.21
+2026-05-16 12:29:37,OPEN_THAIJO,,,,,success,Opened ThaiJO,1727.81
+2026-05-16 12:29:37,THAIJO_INPUT_SEARCH,,python,,,success,Input ThaiJO keyword: python,162.99
+2026-05-16 12:30:10,THAIJO_INPUT_SEARCH,,Hello,,,success,Input ThaiJO keyword: Hello,115.72
+2026-05-16 12:30:25,OPEN_THAIJO,,,,,success,Opened ThaiJO,501.9
+2026-05-16 12:30:25,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,211.6
+2026-05-16 12:30:29,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,25.59
+2026-05-16 12:34:34,OPEN_THAIJO,,,,,success,Opened ThaiJO,1866.91
+2026-05-16 12:34:34,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,369.75
+2026-05-16 12:34:38,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,45.16
+2026-05-16 12:37:57,OPEN_THAIJO,,,,,success,Opened ThaiJO,1522.11
+2026-05-16 12:37:58,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,382.74
+2026-05-16 12:38:02,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO advanced search,53.98
+2026-05-16 12:44:46,OPEN_THAIJO,,,,,success,Opened ThaiJO,2445.38
+2026-05-16 12:44:47,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,224.84
+2026-05-16 12:48:49,CURSOR_MOVE,INDEX_FINGER,,0.5,0.5,success,"Moved cursor smoothly to (-412, 698)",51.17
+2026-05-16 12:49:05,CURSOR_MOVE,INDEX_FINGER,,0.52,0.52,success,"Moved cursor smoothly to (81, 650)",50.74
+2026-05-16 12:49:23,CURSOR_MOVE,INDEX_FINGER,,0.9,0.9,success,"Moved cursor smoothly to (657, 762)",51.29
+2026-05-16 12:56:14,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.9
+2026-05-16 12:56:15,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,102.0
+2026-05-16 12:56:16,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.72
+2026-05-16 12:56:16,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,102.95
+2026-05-16 12:56:29,CLICK,PINCH,,,,success,Clicked,52.53
+2026-05-16 12:56:47,CLICK,PINCH,,,,success,Clicked,52.12
+2026-05-16 12:56:50,CLICK,PINCH,,,,success,Clicked,51.97
+2026-05-16 12:56:53,CLICK,PINCH,,,,success,Clicked,52.15
+2026-05-16 12:57:31,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,"Ignored SCROLL_DOWN, cooldown active",0.26
+2026-05-16 12:57:31,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,102.11
+2026-05-16 12:57:31,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.54
+2026-05-16 12:57:31,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.42
+2026-05-16 12:57:32,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,103.74
+2026-05-16 12:57:32,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,"Ignored SCROLL_DOWN, cooldown active",0.26
+2026-05-16 12:57:32,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.66
+2026-05-16 12:57:32,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,"Ignored SCROLL_DOWN, cooldown active",0.3
+2026-05-16 12:57:34,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.69
+2026-05-16 13:07:38,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.7
+2026-05-16 13:07:41,SCROLL_DOWN,OPEN_PALM_DOWN,,,,success,Scrolled down,101.71
+2026-05-16 13:07:49,OPEN_THAIJO,,,,,success,Opened ThaiJO,2994.8
+2026-05-16 13:08:02,OPEN_THAIJO,,,,,success,Opened ThaiJO,658.54
+2026-05-16 13:08:03,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,271.84
+2026-05-16 13:08:05,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,29.2
+2026-05-16 13:15:39,OPEN_THAIJO,,,,,success,Opened ThaiJO,1537.56
+2026-05-16 13:16:00,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,122.17
+2026-05-16 13:16:05,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,27.16
+2026-05-16 13:22:57,OPEN_THAIJO,,,,,success,Opened ThaiJO,2602.06
+2026-05-16 13:23:04,THAIJO_INPUT_SEARCH,,y,,,success,Input ThaiJO keyword: y,119.74
+2026-05-16 13:23:20,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,30.33
+2026-05-16 13:23:33,THAIJO_INPUT_SEARCH,,Hello,,,error,ThaiJO is not open. Please use OPEN_THAIJO first.,1.95
+2026-05-16 13:23:34,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,error,ThaiJO is not open. Please use OPEN_THAIJO first.,1.25
+2026-05-16 13:27:04,THAIJO_INPUT_SEARCH,,Hello,,,error,ThaiJO is not open. Please use OPEN_THAIJO first.,0.43
+2026-05-16 13:27:07,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,error,ThaiJO is not open. Please use OPEN_THAIJO first.,0.25
+2026-05-16 13:27:16,OPEN_THAIJO,,,,,success,Opened ThaiJO,1583.7
+2026-05-16 13:27:33,THAIJO_INPUT_SEARCH,,machine learning,,,success,Input ThaiJO keyword: machine learning,138.22
+2026-05-16 13:27:35,THAIJO_SUBMIT_SEARCH,PINCH_CONFIRM,,,,success,Submitted ThaiJO search,30.96
+2026-05-16 13:52:45,THAIJO_INPUT_SEARCH,,y,,,error,ThaiJO is not open. Please use OPEN_THAIJO first.,0.49
+2026-05-16 13:52:59,OPEN_THAIJO,,,,,success,Opened ThaiJO,2279.86
+2026-05-16 13:53:05,THAIJO_INPUT_SEARCH,,Hello,,,success,Input ThaiJO keyword: Hello,177.51
+2026-05-16 14:04:17,PING,,,,,success,pong,1.4
+2026-05-16 14:38:32,CURSOR_MOVE,INDEX_FINGER,,0.1,0.5,success,"Moved cursor smoothly to (-478, 707)",53.47
+2026-05-16 14:38:33,CURSOR_MOVE,INDEX_FINGER,,0.14,0.5,success,"Moved cursor smoothly to (-216, 648)",51.44
+2026-05-16 14:38:33,CURSOR_MOVE,INDEX_FINGER,,0.18,0.5,success,"Moved cursor smoothly to (-19, 610)",51.34
+2026-05-16 14:38:33,CURSOR_MOVE,INDEX_FINGER,,0.22,0.5,success,"Moved cursor smoothly to (135, 585)",52.28
+2026-05-16 14:38:33,CURSOR_MOVE,INDEX_FINGER,,0.26,0.5,success,"Moved cursor smoothly to (262, 569)",65.11
+2026-05-16 14:38:33,CURSOR_MOVE,INDEX_FINGER,,0.30000000000000004,0.5,success,"Moved cursor smoothly to (371, 558)",71.74
+2026-05-16 14:38:33,CURSOR_MOVE,INDEX_FINGER,,0.33999999999999997,0.5,success,"Moved cursor smoothly to (469, 551)",57.38
+2026-05-16 14:38:33,CURSOR_MOVE,INDEX_FINGER,,0.38,0.5,success,"Moved cursor smoothly to (560, 547)",52.05
+2026-05-16 14:38:33,CURSOR_MOVE,INDEX_FINGER,,0.42000000000000004,0.5,success,"Moved cursor smoothly to (646, 544)",52.04
+2026-05-16 14:38:34,CURSOR_MOVE,INDEX_FINGER,,0.45999999999999996,0.5,success,"Moved cursor smoothly to (728, 542)",51.09
+2026-05-16 14:38:34,CURSOR_MOVE,INDEX_FINGER,,0.5,0.5,success,"Moved cursor smoothly to (809, 541)",50.91
+2026-05-16 14:38:34,CURSOR_MOVE,INDEX_FINGER,,0.54,0.5,success,"Moved cursor smoothly to (888, 540)",51.11
+2026-05-16 14:38:34,CURSOR_MOVE,INDEX_FINGER,,0.58,0.5,success,"Moved cursor smoothly to (966, 540)",50.91
+2026-05-16 14:38:34,CURSOR_MOVE,INDEX_FINGER,,0.62,0.5,success,"Moved cursor smoothly to (1044, 540)",51.07
+2026-05-16 14:38:34,CURSOR_MOVE,INDEX_FINGER,,0.66,0.5,success,"Moved cursor smoothly to (1122, 540)",50.92
+2026-05-16 14:38:34,CURSOR_MOVE,INDEX_FINGER,,0.7,0.5,success,"Moved cursor smoothly to (1199, 540)",52.25
+2026-05-16 14:38:34,CURSOR_MOVE,INDEX_FINGER,,0.74,0.5,success,"Moved cursor smoothly to (1276, 540)",51.54
+2026-05-16 14:38:34,CURSOR_MOVE,INDEX_FINGER,,0.78,0.5,success,"Moved cursor smoothly to (1353, 540)",50.97
+2026-05-16 14:38:34,CURSOR_MOVE,INDEX_FINGER,,0.82,0.5,success,"Moved cursor smoothly to (1430, 540)",50.94
+2026-05-16 14:38:35,CURSOR_MOVE,INDEX_FINGER,,0.86,0.5,success,"Moved cursor smoothly to (1507, 540)",50.94
+2026-05-16 14:40:41,CURSOR_MOVE,INDEX_FINGER,,0.1,0.5,success,"Moved cursor smoothly to (1046, 540)",51.34
+2026-05-16 14:40:41,CURSOR_MOVE,INDEX_FINGER,,0.14,0.5,success,"Moved cursor smoothly to (773, 540)",51.34
+2026-05-16 14:40:41,CURSOR_MOVE,INDEX_FINGER,,0.18,0.5,success,"Moved cursor smoothly to (623, 540)",52.12
+2026-05-16 14:40:41,CURSOR_MOVE,INDEX_FINGER,,0.22,0.5,success,"Moved cursor smoothly to (552, 540)",51.77
+2026-05-16 14:40:42,CURSOR_MOVE,INDEX_FINGER,,0.26,0.5,success,"Moved cursor smoothly to (533, 540)",51.81
+2026-05-16 14:40:42,CURSOR_MOVE,INDEX_FINGER,,0.30000000000000004,0.5,success,"Moved cursor smoothly to (548, 540)",50.67
+2026-05-16 14:40:42,CURSOR_MOVE,INDEX_FINGER,,0.33999999999999997,0.5,success,"Moved cursor smoothly to (584, 540)",52.94
+2026-05-16 14:40:42,CURSOR_MOVE,INDEX_FINGER,,0.38,0.5,success,"Moved cursor smoothly to (634, 540)",53.39
+2026-05-16 14:40:42,CURSOR_MOVE,INDEX_FINGER,,0.42000000000000004,0.5,success,"Moved cursor smoothly to (694, 540)",54.05
+2026-05-16 14:40:42,CURSOR_MOVE,INDEX_FINGER,,0.45999999999999996,0.5,success,"Moved cursor smoothly to (760, 540)",51.6
+2026-05-16 14:40:42,CURSOR_MOVE,INDEX_FINGER,,0.5,0.5,success,"Moved cursor smoothly to (830, 540)",53.26
+2026-05-16 14:40:42,CURSOR_MOVE,INDEX_FINGER,,0.54,0.5,success,"Moved cursor smoothly to (902, 540)",51.58
+2026-05-16 14:40:42,CURSOR_MOVE,INDEX_FINGER,,0.58,0.5,success,"Moved cursor smoothly to (975, 540)",51.2
+2026-05-16 14:40:43,CURSOR_MOVE,INDEX_FINGER,,0.62,0.5,success,"Moved cursor smoothly to (1050, 540)",51.01
+2026-05-16 14:40:43,CURSOR_MOVE,INDEX_FINGER,,0.66,0.5,success,"Moved cursor smoothly to (1125, 540)",51.08
+2026-05-16 14:40:43,CURSOR_MOVE,INDEX_FINGER,,0.7,0.5,success,"Moved cursor smoothly to (1201, 540)",50.91
+2026-05-16 14:40:43,CURSOR_MOVE,INDEX_FINGER,,0.74,0.5,success,"Moved cursor smoothly to (1277, 540)",50.95
+2026-05-16 14:40:43,CURSOR_MOVE,INDEX_FINGER,,0.78,0.5,success,"Moved cursor smoothly to (1354, 540)",51.49
+2026-05-16 14:40:43,CURSOR_MOVE,INDEX_FINGER,,0.82,0.5,success,"Moved cursor smoothly to (1431, 540)",52.16
+2026-05-16 14:40:43,CURSOR_MOVE,INDEX_FINGER,,0.86,0.5,success,"Moved cursor smoothly to (1508, 540)",52.66
+2026-05-28 15:33:33,THAIJO_INPUT_SEARCH,PINCH_CONFIRM,,,,success,No keyword to search,6.88
+2026-05-28 15:33:38,THAIJO_INPUT_SEARCH,PINCH_CONFIRM,,,,success,No keyword to search,2.24
+2026-05-28 15:34:29,THAIJO_INPUT_SEARCH,PINCH_CONFIRM,,,,success,No keyword to search,2.68
