@@ -123,7 +123,7 @@ def find_search_box(timeout: int = 10):
 
             return null;
         """))
-    except TimeoutException:
+    except (TimeoutException, WebDriverException):
         return None
 
 
