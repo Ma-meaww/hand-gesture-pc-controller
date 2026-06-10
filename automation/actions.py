@@ -19,6 +19,7 @@ COMMAND_COOLDOWN = {
     "SCROLL_UP": 0.25,
     "THAIJO_SUBMIT_SEARCH": 0.8,
     "OPEN_THAIJO": 1.0,
+    "CLOSE_BROWSER": 0.8,
 }
 
 last_command_time = {}
