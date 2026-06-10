@@ -133,7 +133,7 @@ def execute_pc_action(command: str, data: dict) -> dict:
         return success(f"Ignored {command}, cooldown active")
     
     if command == "PING":
-        return success ("pong")
+        return success("pong")
 
     if command == "SCROLL_DOWN":
         pyautogui.scroll(-8)
