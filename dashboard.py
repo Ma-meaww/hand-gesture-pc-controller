@@ -3,7 +3,8 @@ import os
 import pandas as pd
 import streamlit as st
 
-LOG_FILE = "event_log.csv"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+LOG_FILE = os.path.join(BASE_DIR, "logs", "event_log.csv")
 
 CURRENT_COMMANDS = [
     "PING",
@@ -38,7 +39,7 @@ def load_logs() -> pd.DataFrame:
 df = load_logs()
 
 if df.empty:
-    st.warning("ยังไม่มีข้อมูลใน event_log.csv ให้รัน main.py แล้วส่ง command ก่อน")
+    st.warning("ยังไม่มีข้อมูลใน logs/event_log.csv ให้รัน main.py แล้วส่ง command ก่อน")
     st.stop()
 
 df["latency_ms"] = pd.to_numeric(df["latency_ms"], errors="coerce")
