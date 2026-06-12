@@ -217,4 +217,3 @@ Ctrl + C && python main.py
 ## Related
 
 - [hand-gesture-frontend](https://github.com/Ma-meaww/hand-gesture-frontend) — Flutter app สำหรับตรวจจับท่ามือและส่ง command
-testgithub
