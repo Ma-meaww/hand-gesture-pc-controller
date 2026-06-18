@@ -10,7 +10,7 @@ from automation.browser_automation import (
 )
 
 pyautogui.FAILSAFE = True
-pyautogui.PAUSE = 0.05
+pyautogui.PAUSE = 0.01
 
 COMMAND_COOLDOWN = {
     "CLICK": 0.6,
@@ -24,11 +24,13 @@ COMMAND_COOLDOWN = {
 
 last_command_time = {}
 
-SMOOTHING_FACTOR = 0.35
-DEAD_ZONE_PX = 8
+CURSOR_SMOOTHING_FACTOR = 0.28
+CURSOR_DEAD_ZONE_PX = 10
+CURSOR_MIN_INTERVAL_SEC = 0.015
 
 last_cursor_x = None
 last_cursor_y = None
+last_cursor_move_time = 0.0
 
 
 def clamp(value: float, min_value: float = 0.0, max_value: float = 1.0) -> float:
@@ -59,20 +61,37 @@ def input_text(text: str) -> str:
     return f"Input text: {text}"
 
 
-def clamp_pixel(value: int, max_value: int) -> int:
-    return max(0, min(int(value), max_value - 1))
+def clamp_pixel(value: float, max_value: int) -> int:
+    return max(0, min(int(round(value)), max_value - 1))
+
+
+def reset_cursor_state() -> str:
+    global last_cursor_x, last_cursor_y, last_cursor_move_time
+
+    last_cursor_x = None
+    last_cursor_y = None
+    last_cursor_move_time = 0.0
+
+    return "Cursor state reset"
 
 
 def move_cursor(x: float, y: float) -> str:
-    global last_cursor_x, last_cursor_y
+    global last_cursor_x, last_cursor_y, last_cursor_move_time
+
+    now = time.perf_counter()
+
+    if now - last_cursor_move_time < CURSOR_MIN_INTERVAL_SEC:
+        return "Cursor move ignored, interval too short"
+
+    last_cursor_move_time = now
 
     x = clamp(float(x))
     y = clamp(float(y))
 
     screen_width, screen_height = pyautogui.size()
 
-    target_x = clamp_pixel(x * screen_width, screen_width)
-    target_y = clamp_pixel(y * screen_height, screen_height)
+    target_x = clamp_pixel(x * (screen_width - 1), screen_width)
+    target_y = clamp_pixel(y * (screen_height - 1), screen_height)
 
     if last_cursor_x is None or last_cursor_y is None:
         current_x, current_y = pyautogui.position()
@@ -82,24 +101,24 @@ def move_cursor(x: float, y: float) -> str:
     diff_x = target_x - last_cursor_x
     diff_y = target_y - last_cursor_y
 
-    if abs(diff_x) < DEAD_ZONE_PX and abs(diff_y) < DEAD_ZONE_PX:
+    if abs(diff_x) < CURSOR_DEAD_ZONE_PX and abs(diff_y) < CURSOR_DEAD_ZONE_PX:
         return f"Cursor not moved, movement too small ({target_x}, {target_y})"
 
     smooth_x = clamp_pixel(
-        last_cursor_x + diff_x * SMOOTHING_FACTOR,
-        screen_width
+        last_cursor_x + diff_x * CURSOR_SMOOTHING_FACTOR,
+        screen_width,
     )
     smooth_y = clamp_pixel(
-        last_cursor_y + diff_y * SMOOTHING_FACTOR,
-        screen_height
+        last_cursor_y + diff_y * CURSOR_SMOOTHING_FACTOR,
+        screen_height,
     )
 
-    pyautogui.moveTo(smooth_x, smooth_y, duration=0.02)
+    pyautogui.moveTo(smooth_x, smooth_y, duration=0)
 
     last_cursor_x = smooth_x
     last_cursor_y = smooth_y
 
-    return f"Moved cursor smoothly to ({smooth_x}, {smooth_y})"
+    return f"Moved cursor to ({smooth_x}, {smooth_y}) target=({target_x}, {target_y})"
 
 def success(message: str) -> dict:
     return {
@@ -171,6 +190,9 @@ def execute_pc_action(command: str, data: dict) -> dict:
             return success(move_cursor(float(x), float(y)))
         except (TypeError, ValueError):
             return error("Invalid x or y")
+        
+    if command == "CURSOR_RESET":
+        return success(reset_cursor_state())
 
     if command == "OPEN_THAIJO":
         return browser_result(open_thaijo())
