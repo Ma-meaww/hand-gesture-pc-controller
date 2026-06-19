@@ -12,6 +12,8 @@ from automation.browser_automation import (
 pyautogui.FAILSAFE = True
 pyautogui.PAUSE = 0.01
 
+SCROLL_AMOUNT = 40
+
 COMMAND_COOLDOWN = {
     "CLICK": 0.6,
     "CONFIRM": 0.6,
@@ -156,12 +158,12 @@ def execute_pc_action(command: str, data: dict) -> dict:
         return success("pong")
 
     if command == "SCROLL_DOWN":
-        pyautogui.scroll(-8)
-        return success("Scrolled down")
+        pyautogui.scroll(-SCROLL_AMOUNT)
+        return success(f"Scrolled down {SCROLL_AMOUNT}")
 
     if command == "SCROLL_UP":
-        pyautogui.scroll(8)
-        return success("Scrolled up")
+        pyautogui.scroll(SCROLL_AMOUNT)
+        return success(f"Scrolled up {SCROLL_AMOUNT}")
 
     if command == "CLICK":
         pyautogui.click()
